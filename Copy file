@@ -1,4 +1,4 @@
-A Python module to copy files
+A Python Module to copy files
 
 Save this as copyModule.py 
 Then import the module copyModule in python shell 
