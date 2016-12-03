@@ -4,7 +4,7 @@ A Python module to copy files
 
 Save this as copyModule.py
 Then import the module copyModule in python shell
-Then type copyModule.coopyFile()  and the rest will follow
+Then type copyModule.copyFile()  and the rest will follow
 
 def copyFile():
     import os
