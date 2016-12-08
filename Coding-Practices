@@ -1,3 +1,4 @@
+************************************************************************************************************************
 When we are checking for a few numbetrs to be in a range, we should use range() function instead of if-else statement.
 Example - checking of a number if it lies between 10 and 20
 
@@ -19,3 +20,46 @@ Example - checking of a number if it lies between 10 and 20
  if number in range(15,20) 
       is the same as 
  if number>=15 and number<20
+************************************************************************************************************************
+
+# append() - to append values to an array towards the end
+
+   testArray = [1,2,3,4]
+   for i in range(5,11):
+	testArray.append(i)
+   for i in test:
+   	print(i)
+
+#Output - 
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+# To append values to an empty array
+
+   test = []
+   for i in range(1,6):
+       test.append(i)
+
+   for i in test:
+   	print(i)
+
+#Output - 
+
+1
+2
+3
+4
+5
+*************************************************************************************************************************
+
+
+
