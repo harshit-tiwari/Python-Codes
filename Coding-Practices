@@ -1,0 +1,21 @@
+When we are checking for a few numbetrs to be in a range, we should use range() function instead of if-else statement.
+Example - checking of a number if it lies between 10 and 20
+
+#Using If-Else(not recommended)
+
+    if number > 10 and number < 20 :
+    	  print("Yes it is")
+    else :
+	      print("no")
+    
+#Using Range() function (Recommended)
+
+    if number in range(15,21):
+	      print("yes")
+    else :
+	      print("no")
+
+#Note here that the upper limit of the range should be one more than the limit we want to check.
+ if number in range(15,20) 
+      is the same as 
+ if number>=15 and number<20
