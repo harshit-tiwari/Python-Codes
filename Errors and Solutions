@@ -1,0 +1,58 @@
+*************************************************************************************************************************************
+print('C:\Harshit\newLine')
+   Output - 
+        C:\Harshit
+	      ewLine
+        
+This because \n is treated as newline character
+
+This can be avoided by using r before the string in print statement
+
+print(r'C:\Harshit\newLine')
+   Output - 
+        C:\Harshit\newLine
+************************************************************************************************************************************        
+name = 'harshit'
+
+name[0] = h -----------first character
+name[3] = s -----------third character
+
+name[-1] = t ----------last character
+name[-3] = h ----------third last character
+
+Positive indexing => from the first character
+Negative indexing => from the last character
+Positive indexing starts with 0, negative starts with 1 because -0 is 0 itself.
+*************************************************************************************************************************************
+Appending elements to list
+
+We can use the '+' operator to append elements to a list like this
+
+>>> num = [1,2,3,4]
+>>> num  + [5,6,7]
+[1, 2, 3, 4, 5, 6, 7]
+However, this change is not permanent, as shown below
+>>> num
+[1, 2, 3, 4]
+
+To permanently add the new numbers to num, use append() function
+>>> num.append(5)
+>>> num
+[1, 2, 3, 4, 5]
+>>> num.append(6)
+>>> num
+[1, 2, 3, 4, 5, 6]
+-----------------------------------------------------------------------------------------------------------------------
+Assigning and deleting elements in lists
+>>> name
+[1, 2, 3, 4, 5, 6]
+>>> name[:2] = [0,0]
+>>> name
+[0, 0, 3, 4, 5, 6]
+>>> name[:2] = []
+>>> name
+[3, 4, 5, 6]
+>>> name[:] = []
+>>> name
+[]
+
