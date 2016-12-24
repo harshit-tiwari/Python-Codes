@@ -1,5 +1,5 @@
 ************************************************************************************************************************
-When we are checking for a few numbetrs to be in a range, we should use range() function instead of if-else statement.
+When we are checking for a few numbers to be in a range, we should use range() function instead of if-else statement.
 Example - checking of a number if it lies between 10 and 20
 
 #Using If-Else(not recommended)
@@ -20,6 +20,18 @@ Example - checking of a number if it lies between 10 and 20
  if number in range(15,20) 
       is the same as 
  if number>=15 and number<20
+ 
+ 
+ for i in range(10, 40, 5):
+    print(i)
+    
+10
+15
+20
+25
+30
+35
+
 ************************************************************************************************************************
 
 # append() - to append values to an array towards the end
