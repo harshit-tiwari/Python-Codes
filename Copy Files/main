@@ -1,0 +1,8 @@
+import copyFile
+
+try:
+    copyFile.copyDataset()
+except IOError:
+    print("The file copy was not successful")
+else:
+    print("The file copy was successful")
