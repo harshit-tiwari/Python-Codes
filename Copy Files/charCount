@@ -1,0 +1,15 @@
+import string
+
+def charCounter(sourceContents,targetContents):
+    wordSource = str.split(sourceContents)
+    wordTarget = str.split(targetContents)
+
+    sourceChar = 0
+    targetChar = 0
+
+    for i in wordSource:
+        sourceChar += len(i)
+    for i in wordTarget:
+        targetChar += len(i)
+
+    return sourceChar, targetChar
