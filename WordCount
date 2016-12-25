@@ -2,3 +2,7 @@ text = "Hey There!"
 word = text.split()
 total = len(word)
 print("The number of words are : ", total)
+
+Output :-
+
+The number of words are :  2
