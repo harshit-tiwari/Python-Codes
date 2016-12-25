@@ -78,4 +78,17 @@ def charCounter(sourceContents,targetContents):
 
     print("source char %s"%sourceChar)
     print("target char %s"%targetChar)
+    
+**********************************************************************************************************************************
 
+Break statememt should never be coded anywhere apart from a loop statement. Otherwise it gives a syntax error.
+Example:-
+
+    if subtractChoice == 1:
+        largeNumber = int(input("Enter the larger number : "))
+        smallNumber = int(input("Enter the smaller number : "))
+        difference = calculate.subtract(smallNumber,largeNumber)
+        print("The difference of the two numbers is ", difference)
+	break
+
+SyntaxError: 'break' outside loop
