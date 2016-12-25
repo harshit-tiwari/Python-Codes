@@ -56,3 +56,26 @@ Assigning and deleting elements in lists
 >>> name
 []
 
+***********************************************************************************************************************************
+
+len() function cannot be used for files in Python3. Len() function returns different values of the files depending upon the OS and 
+the installation parameters.
+Hence, if we want to determine the length of the files by counting the characters, use the following way.
+
+import string
+
+def charCounter(sourceContents,targetContents):
+    wordSource = str.split(sourceContents)
+    wordTarget = str.split(targetContents)
+
+    sourceChar = 0
+    targetChar = 0
+
+    for i in wordSource:
+        sourceChar += len(i)
+    for i in wordTarget:
+        targetChar += len(i)
+
+    print("source char %s"%sourceChar)
+    print("target char %s"%targetChar)
+
