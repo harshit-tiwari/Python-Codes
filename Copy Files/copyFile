@@ -1,0 +1,40 @@
+import charCount
+
+def copyDataset():
+    import os
+    sourceFileName = input("Enter the source file name: ")
+    targetFileName = input("Enter the target file name: ")
+
+    print("Does source file exists : %s"% os.path.isfile(sourceFileName))
+    print("Does target file exists : %s"% os.path.isfile(targetFileName))
+
+    openSource = open(sourceFileName)
+    print("The length of the source file is : %s"% len(sourceFileName))
+    sourceContents = openSource.read()
+    openSource.close()
+
+    openTarget = open(targetFileName, 'w')
+    openTarget.write(sourceContents)
+    openTarget.close()
+    print("=========File Coying in progress==========")
+    if os.path.isfile(targetFileName) == False:
+       print("The target file was not created in the directory")
+    else:
+       openSourceTesting = open(sourceFileName)
+       sourceContentsTesting = openSourceTesting.read()
+       openSourceTesting.close()
+       openTargetTesting = open(targetFileName)
+       targetContentsTesting = openTargetTesting.read()
+       openTargetTesting.close()
+       numberOfCharacters = charCount.charCounter(sourceContentsTesting,targetContentsTesting)
+       sourceChar = numberOfCharacters[0]
+       targetChar = numberOfCharacters[1]
+       if sourceChar == targetChar:
+           print("Target file creation : Successful\n"
+                 "Data Copy            : Successful")
+       elif targetChar == 0:
+           print("Target file creation : Successful\n"
+                 "Data Copy            : Failed")
+       else:
+           print("Target file creation : Successful\n"
+                 "Data Copy            : Some Data Copied")
