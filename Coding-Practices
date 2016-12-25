@@ -94,3 +94,23 @@ Output -
 The sum is 5
 The sum is 27
 The sum is 39048272
+**********************************************************************************************************************************
+
+2 ways of arguments
+
+def add(firstNumber, secondNumber,thirdNumber):
+    total = firstNumber + secondNumber + thirdNumber
+    return total
+
+numbers = [1,2,3]
+
+amount = add(numbers[0],numbers[1],numbers[2])
+print(amount)
+
+newAmount = add(*numbers)
+print(amount)
+
+Output - 
+
+6
+6
