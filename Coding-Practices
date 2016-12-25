@@ -72,6 +72,25 @@ Example - checking of a number if it lies between 10 and 20
 4
 5
 *************************************************************************************************************************
+#A function can flexible number of arguments as shown below
 
+def add(*args):
+    total = 0
+    for i in args:
+        total += i
+    return total
 
+sum = add(2,3)
+print("The sum is %s"%sum)
 
+sum = add(2,3,4,5,6,7)
+print("The sum is %s"%sum)
+
+sum = add(24,23345,43125,2546436,36435342)
+print("The sum is %s"%sum)
+
+Output - 
+
+The sum is 5
+The sum is 27
+The sum is 39048272
