@@ -1,0 +1,60 @@
+import calculate
+import addition
+import subtraction
+import multiplication
+import division
+
+mainFlag = True
+while mainFlag:
+    print("This is a calculator. Enter your choices as asked below")
+
+    print("1 For Addition\n"
+          "2 For Subtraction\n"
+          "3 For Multiplication\n"
+          "4 For Division")
+    choice = 0
+    number = 0
+    value = 0
+    subtractChoice = 0
+    largeNumber = 0
+    smallNumber = 0
+    largerNumber = 0
+    limit = 0
+    dividend = 0
+    divisor = 0
+    wrongChoice = False
+    while True:
+        try:
+            choice = int(input("Enter your choice here : "))
+            break
+        except ValueError:
+            print("Please enter a number as your choice")
+
+    if choice == 1:
+        addition.addFunc()
+            
+    elif choice == 2:
+        subtraction.subtractFunc()
+            
+    elif choice == 3:
+        multiplication.multiplyFunc()
+            
+    elif choice == 4:
+        division.divideFunc()
+
+    else:
+        print("This is not a valid choice. Please Enter your choice again.")
+
+    innerFlag = True
+    while innerFlag:
+        contChoice = input("Do you want to continue?(Y/N) : ")
+        if contChoice == 'Y' or contChoice == 'y':
+            mainFlag = True
+            innerFlag = False
+        elif contChoice == 'N' or contChoice == 'n':
+            print("Bye!!")
+            mainFlag = False
+            innerFlag = False
+        else:
+            print("Wrong Choice. Please enter the choice again.")
+            innerFlag = True
