@@ -91,11 +91,12 @@ def foo(x, y):
     b = 33
     b = 17
     c = 100
-    print a,b,x,y
+    print(a,b,x,y)
 
 a,b,x,y = 1,15,3,4
 foo(17,4)
-print a,b,x,y
+print(a,b,x,y)
+
 
 
 Output -
