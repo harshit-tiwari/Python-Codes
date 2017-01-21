@@ -32,3 +32,51 @@ Output -
 
         inner val:  100
         outer val:  10
+----------------------------------------------------------------------------------------------------------------------------------------
+Code 3 -
+
+def tester():
+    global val
+    val = 100
+    print("inner val: ", val)
+    
+
+val = 10
+tester()
+print("outer val: ", val)
+
+Output -
+
+        inner val:  100
+        outer val:  100
+---------------------------------------------------------------------------------------------------------------------------------------
+Code 4 -
+
+def tester():
+    print("inner val: ", val)
+    
+val = 20
+tester()
+print("outer val: ", val)
+
+Output -
+
+        inner val:  20
+        outer val:  20
+---------------------------------------------------------------------------------------------------------------------------------------
+Code 5 -
+
+def tester():
+    print("inner val: ", val)
+    val = 100
+    print(val)
+    
+
+val = 20
+tester()
+print("outer val: ", val)
+
+
+Output -
+
+        Error : UnboundLocalError: local variable 'val' referenced before assignment
