@@ -1,0 +1,34 @@
+Global variable 
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Code 1 - 
+
+global val
+val = 20
+def tester():
+    print("inner val: ", val)
+    
+tester()
+print("outer val: ", val)
+
+
+Output -
+
+        inner val:  20
+        outer val:  20
+----------------------------------------------------------------------------------------------------------------------------------------
+Code 2 -         
+
+def tester():
+    val = 100
+    print("inner val: ", val)
+    
+
+val = 10
+tester()
+print("outer val: ", val)
+
+Output -
+
+        inner val:  100
+        outer val:  10
