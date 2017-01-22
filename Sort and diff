@@ -1,0 +1,47 @@
+
+    list = [1,2,3,4,5]
+    difference = 2
+    # Ask the number of elements to be entered in the list
+    while True:
+     #   try:
+            limit = int(input("How many numbers do you want to enter in the list : "))
+            break
+        except ValueError:  # To make sure that only numerals are added as input
+            print("Please enter a number as your input")
+    
+    #Enter the elements one by one
+    for i in range(0, limit):    
+        while True:
+            try:
+                number = int(input("Enter the number %s here " %(i+1)))
+                break
+            except ValueError: # To make sure that only numerals are added as input
+                print("Please enter a number as your input")
+        list.append(number)
+    
+    # Ask the difference to be searched for 
+    difference = int(input("Enter the difference to be searched for in the list"))
+    
+    # call the function pairs() which calculates the number of pairs with difference specified
+    numberOfPairs = pairs(difference, list)
+    
+    print("There are %s pairs of numbers in the list which have difference %s" %(numberOfPairs, difference))
+
+
+
+
+
+def pairs(a,k):
+    # a is the list of numbers and k is the difference value
+    
+    answer = 0
+    #first sort the list 
+    a.sort()
+    
+    for i in range(0,len(a)):
+        for j in range(i+1, len(a)):
+            diff = abs(a[i] - a[j])
+            if diff == k:
+                answer += 1
+    
+    return answer
