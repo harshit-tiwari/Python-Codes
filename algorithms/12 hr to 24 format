@@ -20,3 +20,6 @@ print(str(hr).zfill(2)+':'+minsSec)
 
 zfill(2) makes the single digit number to two digit filling the leading zeroes.
 
+6 --->  06
+1 --->  01
+15 ----> 15
