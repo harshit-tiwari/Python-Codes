@@ -1,0 +1,4 @@
+In Python 3, there is no datatype as long because every integer value is treated as long in Python3.
+
+Ex ; 
+        total = 0       means total is of long type, it can handle large numbers too without need of any other declaration 
