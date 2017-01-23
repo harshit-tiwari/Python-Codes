@@ -30,5 +30,12 @@ if __name__ == '__main__':
     print(pairs(b,_k))
 
 
-Another method
+Another method (Very inefficient and time taking)
 
+def pairs(a,k):
+    count = 0
+    for i in range(len(a)):
+        for j in range((i+1), len(a)):
+            if abs(a[i] - a[j]) == k:
+                count += 1
+    return count
