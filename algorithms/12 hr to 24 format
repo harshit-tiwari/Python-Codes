@@ -1,0 +1,22 @@
+import sys
+
+time = input().strip()
+
+hr = int(time[0:2])
+minsSec = time[3:8]
+amPM = time[8:10]
+
+if amPM.lower() == 'am':
+    if hr == 12:
+        hr = 0
+else:
+    if hr == 12:
+        pass
+    else:
+        hr += 12
+
+print(str(hr).zfill(2)+':'+minsSec)
+
+
+zfill(2) makes the single digit number to two digit filling the leading zeroes.
+
