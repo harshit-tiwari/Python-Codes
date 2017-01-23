@@ -1,0 +1,44 @@
+Algorith to calculate absolute difference in primary and secondary diagnols
+
+
+import sys
+
+
+n = int(input().strip())
+a = []
+for a_i in range(n):
+    a_t = [int(a_temp) for a_temp in input().strip().split(' ')]
+    a.append(a_t)
+
+primarySum = 0
+secondarySum = 0
+
+for i in range(n):
+    for j in range(i, n):
+        primarySum += a[i][j]
+        break
+    
+for i in range(n):
+    for j in reversed(range(0, n)):
+        if j == n-1-i:
+          secondarySum += a[i][j]
+          break   
+
+difference = abs(primarySum - secondarySum)
+print(difference)
+
+
+'''
+
+input =
+
+3
+4 8 2
+1 7 2
+1 2 3
+
+primary - 4 7 3
+secondary = 2 7 1
+output =
+
+4
