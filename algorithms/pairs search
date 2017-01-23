@@ -2,7 +2,6 @@ To display the number of pairs which have the specified difference between their
 
 def pairs(a,k):
     a.sort()
-    print(a)
     count = 0
     for i in range(len(a)):
         number = a[i]+k
