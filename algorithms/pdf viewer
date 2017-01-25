@@ -14,7 +14,24 @@ The tallest letter in abc is b, (3)  and . The selection area for this word is 3
 
 import sys
 
+def get_rect_height(word, height_arr):
+    height = 0
+    for c in word:
+        height = max(height, height_arr[ ord(c) - ord("a") ])
+        #ord(character) gives the ascii value
+    return height
 
+heights = [int(x) for x in input().split()]	#scan heights
+word = input()
+
+print(len(word) * get_rect_height(word, heights))
+
+
+
+INEFFICIENT WAY - 
+
+
+import sys
 h = [int(h_temp) for h_temp in input().strip().split(' ')]
 word = input().strip()
 
