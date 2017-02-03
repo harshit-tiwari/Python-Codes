@@ -1,0 +1,23 @@
+import sys
+
+
+n = int(input())
+
+directory = dict()
+for i in range(n):
+    k,v = input().strip().split(' ')
+    directory.update([(k,v)])
+
+searchList = list()
+for i in range(n):
+    data = input().strip()
+    searchList.append(data)
+    
+for i in searchList:
+    try:
+        print(i+'='+directory[i])
+    except KeyError:
+        print('Not Found')
+
+
+
