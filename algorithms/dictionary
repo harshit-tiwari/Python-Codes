@@ -1,5 +1,6 @@
-import sys
+For running in an interactive shell
 
+import sys
 
 n = int(input())
 
@@ -21,3 +22,20 @@ for i in searchList:
 
 
 
+For running in a non interactive shell
+
+import sys
+
+n = int(input())
+
+directory = dict()
+for i in range(n):
+    k,v = input().strip().split(' ')
+    directory.update([(k,v)])
+
+for i in range(n):
+    key = input()
+    try:
+        print(key+'='+directory[key])
+    except KeyError:
+        print('Not found')
