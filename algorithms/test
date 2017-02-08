@@ -1,0 +1,32 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+
+count = 0
+maxCount = 0
+remainder = 0
+remList = ''
+while(n):
+    remainder = n%2
+    n = n//2
+    remList += str(remainder)
+
+remList = remList[::-1]
+if remList[0] == 1:
+    count = maxCount = 1
+elif remList[0] == 0:
+    count = maxCount = 0
+for i in range(len(remList)):
+    if count > maxCount:
+        maxCount = count
+    if i != len(remList) - 1:
+        if remList[i+1] == 1:
+            count += 1
+        
+                
+                
+
+print(maxCount)
