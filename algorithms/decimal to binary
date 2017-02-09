@@ -1,5 +1,10 @@
 program to convert a decimal to binary equivalent and find the maximum number of consecutive number of 1s in the binary stream.
+Input - 
+13 
+Output 
+2
 
+binary of 13 - 1101, hence the max numbmer consecutive 1s is 2.
 
 import sys
 
