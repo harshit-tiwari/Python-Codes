@@ -1,0 +1,27 @@
+program to convert a decimal to binary equivalent and find the maximum number of consecutive number of 1s in the binary stream.
+
+
+import sys
+
+n = int(input().strip())
+
+count = 0
+maxCount = 0
+remainder = 0
+remList = ''
+while(n):
+    remainder = n%2
+    remList += str(remainder)
+    n = n//2
+    
+
+remList = remList[::-1]
+for i in range(len(remList)):
+    if int(remList[i]) == 1:
+        count += 1
+    else:
+        count = 0
+    if count > maxCount:
+        maxCount = count
+
+print(maxCount)
