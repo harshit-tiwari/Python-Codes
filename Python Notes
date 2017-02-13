@@ -209,14 +209,6 @@ Insert() – To insert an element at a particular position in the list
 [10, 20, 30, 40, 50]
 
 
-
-
-
-
-
-
-
-
 Searching elements in a List
 
 1.	Count() - method returns the number of occurrences of a specific value in a list.
@@ -238,6 +230,7 @@ True
 True
 >>> 10 in a
 False
+
 3.	Index() - To find the index number at which a particular element of the list is present
 
 >>> a = [10, 20,30,40,50]
@@ -250,3 +243,58 @@ If the list has duplicate values then the index() method returns the first occur
 			>>> a.index(20)
 1
 If the element is not found then index() raises an exception instead of returning any bogus value like -1.
+
+
+Removing elements from a list
+
+1.	Del() – the element at the specified index gets deleted and other elements shift their places.
+
+>>> a
+[10, 20, 30, 40, 50]
+>>> del a[3]
+>>> a
+[10, 20, 30, 50]
+>>> a.insert(3, 40)
+>>> a
+[10, 20, 30, 40, 50]
+
+2.	Remove()  - to remove the value specified.
+Remove(value)
+
+>>> a
+[10, 20, 30, 40, 50]
+>>> a.remove(20)
+>>> a
+[10, 30, 40, 50]
+>>> a.remove(20)
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    a.remove(20)
+ValueError: list.remove(x): x not in list
+
+It raises an exception if the specified value is not present in the list.
+It removes the first occurrence of the specified value
+
+			>>> a
+[10, 20, 30, 40, 20, 50]
+>>> a.remove(20)
+>>> a
+[10, 30, 40, 20, 50]
+>>> a.remove(20)
+>>> a
+[10, 30, 40, 50]
+
+Remove without any arguments doesn’t work. It raises an exception. 
+
+3.	Pop() – It also deletes the elements. It can work without any arguments. If specified without any arguments, it deletes the last element of the list.
+
+>>> a
+[10, 20, 30, 40, 50]
+>>> a.pop()
+50
+>>> a
+[10, 20, 30, 40]
+>>> a.pop(1)
+20
+>>> a
+[10, 30, 40]
