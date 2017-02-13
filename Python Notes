@@ -1,8 +1,9 @@
-	Every Python function returns a value; if the function ever executes a return statement, it will return that value, otherwise it will
-	return None, the Python null value.
+	Every Python function returns a value; if the function ever executes a return statement, it will return that value, otherwise 
+	it will return None, the Python null value.
 	In Python, variables are never explicitly typed. Python figures out what type a variable is and keeps track of it internally.
 
-	Python allows function arguments to have default values; if the function is called without the argument, the argument gets its default value. Furthermore, arguments can be specified in any order by using named arguments.
+	Python allows function arguments to have default values; if the function is called without the argument, the argument gets
+	its default value. Furthermore, arguments can be specified in any order by using named arguments.
 
 	Default value of the function -
 
@@ -12,7 +13,8 @@
  	func()
         Even though func has not specified any value of the argument, 10 will be taken as value of the argument. 
 
-	once you have a single named argument, the rest of the arguments must also be named. As soon as you have a named argument, all arguments to the right of that need to be named arguments, too.
+	once you have a single named argument, the rest of the arguments must also be named. As soon as you have a named argument,
+	all arguments to the right of that need to be named arguments, too.
 
          def approximate_size(size, a_kilobyte_is_1024_bytes=True):
 
@@ -23,21 +25,29 @@
 	approximate_size(size=4000, False)
 
 
-	Everything between the triple quotes is the function’s docstring, which documents what the function does. A docstring, if it exists, must be the first thing defined in a function (that is, on the next line after the function declaration). You don’t technically need to give your function a docstring, but you always should. 
+	Everything between the triple quotes is the function’s docstring, which documents what the function does. A docstring, 
+	if it exists, must be the first thing defined in a function (that is, on the next line after the function declaration). 
+	You don’t technically need to give your function a docstring, but you always should. 
 
-	Built-in modules behave just like regular modules, but their Python source code is not available, because they are not written in Python! (Like Python itself, these built-in modules are written in C.)
+	Built-in modules behave just like regular modules, but their Python source code is not available, because they are not 
+	written in Python! (Like Python itself, these built-in modules are written in C.)
 
-	A function, like everything else in Python, is an object.  Strings are objects. Lists are objects. Functions are objects. Classes are objects. Class instances are objects. Even modules are objects.
+	A function, like everything else in Python, is an object.  Strings are objects. Lists are objects. Functions are objects. 
+	Classes are objects. Class instances are objects. Even modules are objects.
 	Everything is an object in the sense that it can be assigned to a variable or passed as an argument to a function.
-	Modules are first-class objects. You can pass an entire module as an argument to a function. Classes are first-class objects, and individual instances of a class are also first-class objects.
+	Modules are first-class objects. You can pass an entire module as an argument to a function. Classes are first-class objects, 
+	and individual instances of a class are also first-class objects.
 
 	The only delimiter in python is a colon (:) and the indentation of the code itself.
-	Indentation forms a code block. A complete blank line within a code block doesn't signify end of block. A complete blank lie is completely ignored and the execution is started with the next line.
+	Indentation forms a code block. A complete blank line within a code block doesn't signify end of block. A complete blank line 
+	is completely ignored and the execution is started with the next line.
 	Indentation is language requirement in Python. It is not a style of coding.
 
 Exceptions 
 Exception is an indication that something went wrong in the code execution. Exceptions are handled in python using except block.
-It is not important that the exceptions should be handled in the block in which they occur. If a particular exception is not handled in its function then it traces back to its calling function and if handle condition is not found there, then to its calling function and this way up the stack.
+It is not important that the exceptions should be handled in the block in which they occur. If a particular exception is not handled 
+in its function then it traces back to its calling function and if handle condition is not found there, then to its calling function 
+and this way up the stack.
 
 
 One of Python’s built-in exceptions is ImportError, which is raised when you try to import a module and
@@ -59,7 +69,8 @@ Later, you can check for the presence of the chardet module with a simple if sta
 		       # continue anyway
 
 The concept of Unbound Variables
-We do not need to declare any variable inn python. However, we definitely need to assign some value to a variable before it is used or referenced anywhere in the program. Python never allows any variable to be referenced before it is assigned a value.
+We do not need to declare any variable inn python. However, we definitely need to assign some value to a variable before it is used 
+or referenced anywhere in the program. Python never allows any variable to be referenced before it is assigned a value.
 
 	Python does not support in-line assignment, so there’s no chance of accidentally assigning the value
        you thought you were comparing.
@@ -131,7 +142,8 @@ Type Casting
 		>>> float(5)
 		5.0
 
-Python 2 had separate types for int and long. The int datatype was limited by sys.maxint, which varied by platform but was usually 232-1. Python 3 has just one integer type, which behaves mostly like the old long type from Python 2.
+Python 2 had separate types for int and long. The int datatype was limited by sys.maxint, which varied by platform but was usually 
+232-1. Python 3 has just one integer type, which behaves mostly like the old long type from Python 2.
 
 Fraction function - to reduce fractions. 
 Module - fractions
@@ -147,7 +159,8 @@ Lists
 A list in Python can hold arbitrary objects and can expand dynamically as new items are added.
 
 Slicing the lists
-You can get a part of a list, called a “slice”, by specifying two indices. The return value is a new list containing all the items of the list, in order, starting with the first slice index, up to but not including the second slice index.
+You can get a part of a list, called a “slice”, by specifying two indices. The return value is a new list containing all the items 
+of the list, in order, starting with the first slice index, up to but not including the second slice index.
 
  		>>>a = [23,45,12,67,90]
 		>>> a[1:2]
@@ -155,7 +168,8 @@ You can get a part of a list, called a “slice”, by specifying two indices. T
 		>>> a[1:3]
 		[45, 12]
 
-If the left slice index is 0, you can leave it out, and 0 is implied. Similarly, if the right slice index is the length of the list, you can leave it out.
+If the left slice index is 0, you can leave it out, and 0 is implied. Similarly, if the right slice index is the length of the list, 
+you can leave it out.
 
 		>>>a[:3]
 		[23, 45, 12]
@@ -181,7 +195,8 @@ Ans - 	Append() will add a single element to the end of the list.
 	[23, 45, 12, 67, 90, 'hsdad', 'jagca', 323, 5346]
 
 
-If we try to pass a list to the append() function, it will add the whole list to the original list as a new element. It won't add the individual elements of the passed list to the main list as individual elements.
+If we try to pass a list to the append() function, it will add the whole list to the original list as a new element. It won't add the 
+individual elements of the passed list to the main list as individual elements.
 
 	>>> b
 	[23, 45, 12, 67, 90] 	
@@ -218,7 +233,7 @@ Searching elements in a List
 2
 >>> a.count(5)
 1
-
+	
 
 
 2.	In Operator – to determine whether a particular element is resent in the list or not. It returns a true or false.
@@ -286,7 +301,8 @@ It removes the first occurrence of the specified value
 
 Remove without any arguments doesn’t work. It raises an exception. 
 
-3.	Pop() – It also deletes the elements. It can work without any arguments. If specified without any arguments, it deletes the last element of the list.
+3.	Pop() – It also deletes the elements. It can work without any arguments. If specified without any arguments, it deletes 
+	the last element of the list.
 
 >>> a
 [10, 20, 30, 40, 50]
