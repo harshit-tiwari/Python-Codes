@@ -314,3 +314,74 @@ Remove without any arguments doesn’t work. It raises an exception.
 20
 >>> a
 [10, 30, 40]
+>>> a.pop(0)
+10
+>>> a
+[20, 30, 40, 50]
+
+
+Tuple – 
+Tuples are immutable in anyway
+Tuples are declared with curved brackets () whereas lists are declared with square brackets []
+But tuples and lists, both are accessed in the same fashion ie.. by square brackets [].
+
+		x = (1,2,3,4,5)
+>>> x[0]
+1
+>>> x(0)
+Traceback (most recent call last):
+  File "<pyshell#91>", line 1, in <module>
+    x(0)
+TypeError: 'tuple' object is not callable
+
+The major difference between tuples and lists is that tuples cannot be changed. In technical terms, tuples are immutable. In practical terms, they have no methods that would allow you to change them. Lists have methods like append(), extend(), insert(), remove(), and pop(). Tuples have none of these methods.
+You can slice a tuple (because that creates a new tuple), and you can check whether a tuple contains a
+particular value (because that doesn’t change the tuple), and… that’s about it.
+
+		>>> x[-1]
+5
+>>> 1 in x
+True
+>>> y = x[2:4]
+>>> y
+(3, 4)
+>>> x
+(1, 2, 3, 4, 5)
+So what are tuples good for?
+1.	 Tuples are faster than lists. If you’re defining a constant set of values and all you’re ever going to do with it is iterate through it, use a tuple instead of a list.
+
+2.	It makes your code safer if you “write-protect” data that doesn’t need to be changed. Using a tuple instead of a list is like having an implied assert statement that shows this data is constant, and that special thought (and a specific function) is required to override that.
+
+3.	Some tuples can be used as dictionary keys (specifically, tuples that contain immutable values like strings, numbers, and other tuples). Lists can never be used as dictionary keys, because lists are not immutable.
+
+Tuples can be converted into lists, and vice-versa. The built-in tuple() function takes a list and returns a tuple with the same elements, and the list() function takes a tuple and returns a list. In effect, tuple() freezes a list, and list() thaws a tuple.
+
+			>>> a = [1,2,3,4,5]
+>>> a.pop()
+5
+>>> a
+[1, 2, 3, 4]
+>>> x = tuple(a)
+>>> x
+(1, 2, 3, 4)
+>>> x.pop()
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    x.pop()
+AttributeError: 'tuple' object has no attribute 'pop'
+
+
+>>> b = (9,8,7,6,5)
+>>> b.pop()
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    b.pop()
+AttributeError: 'tuple' object has no attribute 'pop'
+>>> y = list(b)
+>>> y
+[9, 8, 7, 6, 5]
+>>> y.pop()
+5
+>>> y
+[9, 8, 7, 6]
+
