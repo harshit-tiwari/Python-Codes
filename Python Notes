@@ -568,3 +568,36 @@ TypeError: pop() takes no arguments (1 given)
 
 The error occurred because pop takes index number and in sets there is no index number because the sets are unordered bags.
 
+
+Q - How to remove all elements at once?
+
+ANS – using Clear() function or re-declaring the collection.
+
+LISTS   
+			>>> b = [1,2,3,4]
+>>> b
+[1, 2, 3, 4]
+>>> b.clear()
+>>> b
+[]
+
+>>> b = [1,2,3,4]
+>>> b = list()
+>>> b
+[]
+TUPLES  
+
+			>>> c = (1,2,3,4)
+>>> c
+(1, 2, 3, 4)
+>>> c = tuple()
+>>> c
+()
+>>> c.clear()
+Traceback (most recent call last):
+  File "<pyshell#53>", line 1, in <module>
+    c.clear()
+AttributeError: 'tuple' object has no attribute 'clear'
+
+Tuples do not have Clear() function
+
