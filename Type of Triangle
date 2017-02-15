@@ -1,0 +1,25 @@
+A program to detrmine the type of triangle based ont he side lengths of the triangle.
+
+import sys
+
+def typeOfTriangle(a,b,c):
+    status = 'Condition not handled'
+    if (not((a+b) > c and (a+c) > b and (b+c) > a)):
+        status = 'Not A Triangle'
+    elif (a == b and a == c and b == c):
+        status = 'Equilateral'
+    elif (a != b and a != c and b != c):
+        status = 'Scalene'
+    elif ((a == b and a != c and b != c) or (a != b and a == c and b != c) or (a != b and a != c and b == c)):
+          status = 'Isosceles'
+    return status
+
+
+a,b,c = input().strip().split(' ')
+a = int(a)
+b = int(b)
+c = int(c)
+
+print(typeOfTriangle(a,b,c))
+
+
