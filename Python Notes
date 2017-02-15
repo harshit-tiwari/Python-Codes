@@ -601,3 +601,65 @@ AttributeError: 'tuple' object has no attribute 'clear'
 
 Tuples do not have Clear() function
 
+
+Some operations on Sets  - all the below operations return a set
+
+1.	Union – just combines the two sets. But the uniqueness of the elements is not compromised with.
+
+>>> a = {1,2,3,4,5}
+>>> b = {6,7,8,9,10}
+>>> c = a.union(b)
+>>> c
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+>>> x = {1,2,3}
+>>> y = {3,4,5}
+>>> z = x.union(y)
+>>> z
+{1, 2, 3, 4, 5}
+
+2.	Intersection – returns the elements which are present in both the sets. 
+
+>>> m = {1,2,3,4,5}
+>>> n = {4,5,6,7,8}
+>>> o = m.intersection(n)
+>>> o
+{4, 5}
+
+3.	Difference – returns the elements which are present in the first set but absent in the second set.
+
+>>> a = {1,2,3,4,5}
+>>> b = {4,5,6,7,8}
+>>> c = a.difference(b)
+>>> c
+{1, 2, 3}
+
+4.	Symmetric Difference – Returns the elements which are in exactly one of the sets  
+
+>>> a.symmetric_difference(b)
+{1, 2, 3, 6, 7, 8}
+>>> b.symmetric_difference(a)
+{1, 2, 3, 6, 7, 8}
+
+
+
+Dictionaries
+
+Python dictionaries are optimized for retrieving the value when you know the key, but not the other way around.
+
+			>>> d = {1:'a', 2:'b', 3:'c'}
+>>> d
+{1: 'a', 2: 'b', 3: 'c'}
+>>> d[3] = 'asdf'
+>>> d
+{1: 'a', 2: 'b', 3: 'asdf'}
+>>> len(d)
+3
+>>> d.update([{4,'d'}])
+>>> d
+{1: 'a', 2: 'b', 3: 'asdf', 4: 'd'}
+>>> d[5] ='svgg'
+>>> d
+{1: 'a', 2: 'b', 3: 'asdf', 4: 'd', 5: 'svgg'}
+>>> d[5]
+'svgg'
+
