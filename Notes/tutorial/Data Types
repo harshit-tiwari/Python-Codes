@@ -1,0 +1,78 @@
+Data Types
+
+Difference between Lists and Tuples-
+Lists are mutable whereas tuples are immutable
+
+	>>>a= [1,2,3,4,5]
+
+	>>> a[2] = 10
+
+	>>> a
+	[1, 2, 10, 4, 5]
+
+	>>> b =(1,2,3,4,5)
+
+	>>> b[2] = 10
+	Traceback (most recent call last):
+	  File "<pyshell#4>", line 1, in <module>
+	    b[2] =	 10
+	TypeError: 'tuple' object does not support item assignment
+
+
+Boolean 
+The boolean values like True and False can be treated as numbers. 
+	True = 1
+	False = 0
+
+	True + True = 2
+	False + False = 0
+	False + True = 1
+
+Numbers 
+Interview Question
+How to determine the type of the variable you are dealing with
+	The type() function can be used to determine the data type of a particular variable.
+		>>> a = 2
+		>>> type(a)
+		       <class 'int'>
+
+		>>> b = 1.2
+		>>> type(b)
+		      <class 'float'>
+
+	IsInstance() can also be used.
+
+		>>> isinstance(a, int)
+		True
+		>>> isinstance(a, float)
+		False
+		>>> isinstance(b, float)
+		True
+		>>> isinstance(b, int)
+		False
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+	int + int = int
+	float + float = float
+	int + float = float
+
+Type Casting 
+
+		>>> int(12.5)
+		12                This value is truncated not rounded
+		>>> float(5)
+		5.0
+
+Fraction function - to reduce fractions. 
+Module - fractions
+Function - Fractions..................with 'F' capital
+	>>> import fractions
+	>>> a = fractions.Fraction(6,2)
+	>>> a
+	Fraction(3, 1)
+	>>> type(a)
+	<class 'fractions.Fraction'>
+
