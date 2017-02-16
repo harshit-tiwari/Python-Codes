@@ -1,0 +1,32 @@
+Exceptions 
+Exception is an indication that something went wrong in the code execution. Exceptions are handled in python using except block.
+It is not important that the exceptions should be handled in the block in which they occur. If a particular exception is not handled in 
+its function then it traces back to its calling function and if handle condition is not found there, then to its calling function and 
+this way up the stack.
+
+
+One of Python’s built-in exceptions is ImportError, which is raised when you try to import a module and
+fail. This can happen for a variety of reasons, but the simplest case is when the module doesn’t exist in your
+import search path. You can use this to include optional features in your program. For example, the
+chardet library provides character encoding auto-detection. Perhaps your program wants to use this library
+if it exists, but continue gracefully if the user hasn’t installed it. You can do this with a try..except block.
+
+		try:
+		         import chardet
+		except ImportError:
+		        chardet = None
+
+Later, you can check for the presence of the chardet module with a simple if statement:
+
+		if chardet:
+		        # do something
+		else:
+		       # continue anyway
+
+The concept of Unbound Variables
+We do not need to declare any variable inn python. However, we definitely need to assign some value to a variable before it is used or 
+referenced anywhere in the program. Python never allows any variable to be referenced before it is assigned a value.
+
+	Python does not support in-line assignment, so there’s no chance of accidentally assigning the value
+       you thought you were comparing.
+
