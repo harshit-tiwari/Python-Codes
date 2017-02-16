@@ -1,0 +1,169 @@
+Lists
+A list in Python can hold arbitrary objects and can expand dynamically as new items are added.
+
+Slicing the lists
+You can get a part of a list, called a “slice”, by specifying two indices. The return value is a new list containing all the items of the list, in order, starting with the first slice index, up to but not including the second slice index.
+
+ 		>>>a = [23,45,12,67,90]
+		>>> a[1:2]
+		[45]
+		>>> a[1:3]
+		[45, 12]
+
+If the left slice index is 0, you can leave it out, and 0 is implied. Similarly, if the right slice index is the length of the list, 
+you can leave it out.
+
+		>>>a[:3]
+		[23, 45, 12]
+		>>> a[2:]
+		[12, 67, 90]
+
+To Copy a list - Do not specify any value on either side of the colon
+  
+		>>>b = a[:]
+		>>> b
+		[23, 45, 12, 67, 90]
+
+Adding elements to a list
+
+Difference between append and extend
+Ans - 	Append() will add a single element to the end of the list.
+	Extend() can add a list to a list
+
+      	 >>> a
+	[23, 45, 12, 67, 90]
+	>>> a.extend(['hsdad','jagca',323,5346])
+	>>> a
+	[23, 45, 12, 67, 90, 'hsdad', 'jagca', 323, 5346]
+
+
+If we try to pass a list to the append() function, it will add the whole list to the original list as a new element. It won't add the individual elements of the passed list to the main list as individual elements.
+
+	>>> b
+	[23, 45, 12, 67, 90] 	
+	 >>> b.append([123,654,678])
+	>>> b
+	[23, 45, 12, 67, 90, [123, 654, 678]]
+
+Whereas 
+
+	>>>b
+	[23, 45, 12, 67, 90]
+	>>> b.extend([100,200,300])
+	>>> b
+	[23, 45, 12, 67, 90, 100, 200,300]
+
+
+Insert() – To insert an element at a particular position in the list
+		Insert(index, value to be inserted)
+	
+>>> a = [10, 20, 40, 50]
+>>> a
+[10, 20, 40, 50]
+>>> a.insert(2,30)
+>>> a
+[10, 20, 30, 40, 50]
+
+
+
+Searching elements in a List
+
+1.	Count() - method returns the number of occurrences of a specific value in a list.
+
+>>> a = [1,2,3,2,1,5,4,6,7,8,4]
+>>> a.count(1)
+2
+>>> a.count(5)
+1
+
+
+
+2.	In Operator – to determine whether a particular element is resent in the list or not. It returns a true or false.
+
+>>> a = [1,2,3,2,1,5,4,6,7,8,4]
+>>> 1 in a
+True
+>>> 5 in a
+True
+>>> 10 in a
+False
+
+3.	Index() - To find the index number at which a particular element of the list is present
+
+>>> a = [10, 20,30,40,50]
+>>> a.index(10)
+0
+>>> a.index(30)
+2
+If the list has duplicate values then the index() method returns the first occurring index of the element.
+			>>> a = [10, 20,30,40,50, 20,40]
+			>>> a.index(20)
+1
+If the element is not found then index() raises an exception instead of returning any bogus value like -1.
+
+
+
+
+Removing elements from a list
+
+1.	Del() – the element at the specified index gets deleted and other elements shift their places.
+
+>>> a
+[10, 20, 30, 40, 50]
+>>> del a[3]
+>>> a
+[10, 20, 30, 50]
+>>> a.insert(3, 40)
+>>> a
+[10, 20, 30, 40, 50]
+
+2.	Remove()  - to remove the value specified.
+Remove(value)
+
+>>> a
+[10, 20, 30, 40, 50]
+>>> a.remove(20)
+>>> a
+[10, 30, 40, 50]
+>>> a.remove(20)
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    a.remove(20)
+ValueError: list.remove(x): x not in list
+
+It raises an exception if the specified value is not present in the list.
+It removes the first occurrence of the specified value
+
+			>>> a
+[10, 20, 30, 40, 20, 50]
+>>> a.remove(20)
+>>> a
+[10, 30, 40, 20, 50]
+>>> a.remove(20)
+>>> a
+[10, 30, 40, 50]
+
+Remove without any arguments doesn’t work. It raises an exception. 
+
+
+
+
+
+
+
+3.	Pop() – It also deletes the elements. It can work without any arguments. If specified without any arguments, it deletes the last element of the list.
+
+>>> a
+[10, 20, 30, 40, 50]
+>>> a.pop()
+50
+>>> a
+[10, 20, 30, 40]
+>>> a.pop(1)
+20
+>>> a
+[10, 30, 40]
+			>>> a.pop(0)			# specify the index number in pop()
+10                                
+>>> a
+[20, 30, 40, 50]
