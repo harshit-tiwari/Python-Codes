@@ -12,3 +12,16 @@
 
 >>> d['jon']
 'snow'
+
+
+>>> type(a)
+<class 'str'>
+
+>>> type(b)
+<class 'list'>
+ 
+>>> type(c)
+<class 'list'>
+
+>>> type(d)
+<class 'dict'>
