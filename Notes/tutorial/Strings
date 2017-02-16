@@ -1,0 +1,54 @@
+The format() function -
+
+			>>> a = 'harshit'
+			>>> b = 'tiwari'
+			>>> "{0}'s last name is {1}".format(a,b)
+			"harshit's last name is tiwari"
+
+                        >>> a = 'abcd'
+                        >>> a.upper()
+                        'ABCD'
+
+
+                        >>> b = 'QWERT'
+			>>> b.lower()
+			'qwert'
+
+
+Splitlines() - It works only with multii line strings
+
+>>> s = '''kvwewelvkbdvwe'b
+	wbwllbkwbn;wb
+	wrbn;wknblwkb
+	wb;kwnbknb;w
+	dkn kd
+	'''
+>>> s
+"kvwewelvkbdvwe'b\nwbwllbkwbn;wb\nwrbn;wknblwkb\nwb;kwnbknb;w\ndkn kd\n "
+
+>>> s.splitlines()
+["kvwewelvkbdvwe'b", 'wbwllbkwbn;wb', 'wrbn;wknblwkb', 'wb;kwnbknb;w', ' dkn kd', ' ']
+
+
+
+Count() - It returns the number of occurences of a particular sub string
+
+
+                        >>> a = 'harshittiwari'
+			>>> a.count('har')
+			1
+			>>> a = 'harshittiwariharshit'
+			>>> a.count('har')
+			2
+
+
+split() - 
+
+                        >>> a = 'jon,snow&robert,baratheon&cersei,lannister'
+			>>> b = a.split('&')
+			>>> b
+			['jon,snow', 'robert,baratheon', 'cersei,lannister']
+
+
+
+
