@@ -1,0 +1,219 @@
+Sets - A set is an unordered “bag” of unique values
+
+			>>> A = {1,2,3,4,5}
+			>>> A
+{1, 2, 3, 4, 5}
+>>> type(A)
+<class 'set'>
+
+
+
+
+
+Set() function - To convert a list to a set
+		
+			>>> a = [1,2,3,4,5]
+>>> type(a)
+<class 'list'>
+>>> b = set(a)
+>>> type(b)
+<class 'set'>
+
+
+Since the sets are unordered, they do not remember the original order in which they were formed.
+
+Sets have strictly unique values 
+			c = {1,2,3,4,5,5,5,6,7,}
+>>> c
+{1, 2, 3, 4, 5, 6, 7}
+
+
+Way to create empty set is different from others. We shou8ld use the Set() function or else dictionary will be created.
+
+			>>> a = []
+>>> type(a)
+<class 'list'>
+>>> b = ()
+>>> type(b)
+<class 'tuple'>
+>>> c = {}
+>>> type(c)
+<class 'dict'>
+>>> d = set()
+>>> type(d)
+<class 'set'>
+
+>>> a
+[]
+>>> b
+()
+>>> c
+{}
+>>> d
+set()
+
+
+
+
+
+
+Modifying Sets – 
+
+1.	Add() function – it takes only single values. If any duplicates are added, it does nothing, neither adds nor raises any exception.
+
+>>> a = {1,2,3,4}
+>>> a.add(5)
+>>> a
+{1, 2, 3, 4, 5}
+>>> a.add(5,6)
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    a.add(5,6)
+TypeError: add() takes exactly one argument (2 given)
+>>> a.add(2)
+>>> a
+{1, 2, 3, 4, 5}
+
+2.	Update function() –  to add more than 1 values to the set. The uniqueness of the data is maintained. Data of different sets can 
+be added to form a one larger set. Also, data of different data types can be added.
+
+>>> a.update(6,7,8)
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    a.update(6,7,8)
+TypeError: 'int' object is not iterable
+>>> a.update({6,7,8})
+>>> a
+{1, 2, 3, 4, 5, 6, 7, 8}
+>>> a.update({9,10}, {11,12})
+>>> a
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+			>>> a.update({10.2,11.4},{1,2,3})
+>>> a
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 10.2, 11.4}
+
+It only adds sets to the set. Individual values cannot be added like add() function.
+
+			>>> a.update(15)
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    a.update(15)
+TypeError: 'int' object is not iterable
+>>> a.update({15})
+>>> a
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 10.2, 11.4, 15}
+
+Removing elements from a Set- 
+
+1.	Discard() function 
+2.	Remove() function 
+There is only one difference b/w discard and remove function. If discard is applied for a value which doesn’t exist in the set, 
+then nothing happens, it does nothing. Whereas the remove function raises a KeyError in this case.
+
+>>> a
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 10.2, 11.4, 15}
+>>> a.discard(1)
+>>> a
+{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 10.2, 11.4, 15}
+>>> a.remove(2)
+>>> a
+{3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 10.2, 11.4, 15}
+>>> a.discard(1)
+>>> a.remove(2)
+Traceback (most recent call last):
+  File "<pyshell#29>", line 1, in <module>
+    a.remove(2)
+KeyError: 2
+
+3.	Pop() function – It works the same as with lists but since sets are unordered, there is no first and last in the sets, hence 
+POP() function can remove any value from the set. It doesn’t work on the basis of first and last value of the set.
+
+>>> a.pop()
+3
+>>> a.pop()
+4
+>>> a.pop(6)
+Traceback (most recent call last):
+  File "<pyshell#32>", line 1, in <module>
+    a.pop(6)
+TypeError: pop() takes no arguments (1 given)
+
+The error occurred because pop takes index number and in sets there is no index number because the sets are unordered bags.
+
+
+
+
+
+	
+
+
+
+Q - How to remove all elements at once?
+
+ANS – using Clear() function or re-declaring the collection.
+
+LISTS   
+			>>> b = [1,2,3,4]
+>>> b
+[1, 2, 3, 4]
+>>> b.clear()
+>>> b
+[]
+
+>>> b = [1,2,3,4]
+>>> b = list()
+>>> b
+[]
+TUPLES  
+
+			>>> c = (1,2,3,4)
+>>> c
+(1, 2, 3, 4)
+>>> c = tuple()
+>>> c
+()
+>>> c.clear()
+Traceback (most recent call last):
+  File "<pyshell#53>", line 1, in <module>
+    c.clear()
+AttributeError: 'tuple' object has no attribute 'clear'
+
+Tuples do not have Clear() function
+
+Some operations on Sets  - all the below operations return a set
+
+1.	Union – just combines the two sets. But the uniqueness of the elements is not compromised with.
+
+>>> a = {1,2,3,4,5}
+>>> b = {6,7,8,9,10}
+>>> c = a.union(b)
+>>> c
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+>>> x = {1,2,3}
+>>> y = {3,4,5}
+>>> z = x.union(y)
+>>> z
+{1, 2, 3, 4, 5}
+
+2.	Intersection – returns the elements which are present in both the sets. 
+
+>>> m = {1,2,3,4,5}
+>>> n = {4,5,6,7,8}
+>>> o = m.intersection(n)
+>>> o
+{4, 5}
+
+3.	Difference – returns the elements which are present in the first set but absent in the second set.
+
+>>> a = {1,2,3,4,5}
+>>> b = {4,5,6,7,8}
+>>> c = a.difference(b)
+>>> c
+{1, 2, 3}
+
+4.	Symmetric Difference – Returns the elements which are in exactly one of the sets  
+
+>>> a.symmetric_difference(b)
+{1, 2, 3, 6, 7, 8}
+>>> b.symmetric_difference(a)
+{1, 2, 3, 6, 7, 8}
