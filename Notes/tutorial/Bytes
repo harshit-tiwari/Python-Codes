@@ -1,0 +1,17 @@
+An immutable sequence of numbers-between-0-and-255 is called a bytes object.
+
+          >>> g = b'hrteys'
+          >>> len(g)
+          6
+          >>> g[0]
+          104
+
+           g += b'qwe'
+           >>> g
+           b'hrteysqwe'
+
+           >>> g[0]
+           104
+           >>> g[1]
+           114
+# This is because the itelms of bytes are numbers. The ASCII code of the character is stored.
