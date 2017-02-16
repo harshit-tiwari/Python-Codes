@@ -1,0 +1,44 @@
+	Every Python function returns a value; if the function ever executes a return statement, it will return that value, otherwise it will 
+  return None, the Python null value.
+	In Python, variables are never explicitly typed. Python figures out what type a variable is and keeps track of it internally.
+
+	Python allows function arguments to have default values; if the function is called without the argument, the argument gets its default 
+   value. Furthermore, arguments can be specified in any order by using named arguments.
+
+	Default value of the function -
+
+    	def func(a = 10):
+         		print(a)
+
+ 	func()
+Even though func has not specified any value of the argument, 10 will be taken as value of the argument. 
+
+	once you have a single named argument, the rest of the arguments must also be named. As soon as you have a named argument, all
+  arguments to the right of that need to be named arguments, too.
+
+         def approximate_size(size, a_kilobyte_is_1024_bytes=True):
+
+	approximate_size(a_kilobyte_is_1024_bytes=False, 4000)
+	Fails coz one is named, other is unnamed
+
+	Same for 
+	approximate_size(size=4000, False)
+
+
+	Everything between the triple quotes is the function’s docstring, which documents what the function does. A docstring, if it exists, 
+must be the first thing defined in a function (that is, on the next line after the function declaration). 
+You don’t technically need to give your function a docstring, but you always should. 
+
+	Built-in modules behave just like regular modules, but their Python source code is not available, because they are not written in 
+Python! (Like Python itself, these built-in modules are written in C.)
+
+	A function, like everything else in Python, is an object.  Strings are objects. Lists are objects. Functions are objects. Classes 
+are objects. Class instances are objects. Even modules are objects.
+	Everything is an object in the sense that it can be assigned to a variable or passed as an argument to a function.
+	Modules are first-class objects. You can pass an entire module as an argument to a function. Classes are first-class objects, and 
+individual instances of a class are also first-class objects.
+
+	The only delimiter in python is a colon (:) and the indentation of the code itself.
+	Indentation forms a code block. A complete blank line within a code block doesn't signify end of block. A complete blank lie is 
+  completely ignored and the execution is started with the next line.
+	Indentation is language requirement in Python. It is not a style of coding.
