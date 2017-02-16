@@ -1,3 +1,14 @@
+An immutable sequence of Unicode characters is called a String.
+
+			>>> x = 'harshit'
+			>>> x[0]
+			'h'
+			>>> x[0]= 'q'
+			Traceback (most recent call last):
+			  File "<pyshell#77>", line 1, in <module>
+ 			   x[0]= 'q'
+			TypeError: 'str' object does not support item assignment
+
 The format() function -
 
 			>>> a = 'harshit'
