@@ -1,0 +1,30 @@
+Current Working Directory
+
+The OS module is used to fetch the current working directory.
+2 functions are used to deal with the concept of CWD:
+1.	Getcwd()
+2.	Chdir()
+
+>>> import os
+>>> os.getcwd()
+'C:\\Users\\harshit_tiwari\\AppData\\Local\\Programs\\Python\\Python35'
+
+>>> os.chdir('D:\python\programs')
+>>> os.getcwd()
+'D:\\python\\programs'
+
+
+Displaying the contents of the current working directory
+
+Glob module is used
+
+>>> import glob
+>>> glob.glob('p*.py')
+['palindrome.py', 'practice.py', 'product7.py']
+>>> glob.glob('p*')
+['palindrome.py', 'practice.py', 'practicefile.txt', 'product7.py']
+
+>>> glob.glob('*es*.py')
+['test.py']
+>>> glob.glob('*es*')
+['test.py', 'testing.txt']
