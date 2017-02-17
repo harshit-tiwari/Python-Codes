@@ -22,3 +22,23 @@ Traceback (most recent call last):
   File "<pyshell#43>", line 1, in <module>
     g[0] = 115
 TypeError: 'bytes' object does not support item assignment
+
+
+The Byte is immutable whereas byteArrays are mutable.
+
+>>> type(g)
+<class 'bytes'>
+>>> h = bytearray(g)
+>>> h
+bytearray(b'hrteysqwe')
+>>> type(h)
+<class 'bytearray'>
+>>> h[0]
+104
+>>> h[0] = 105
+>>> h
+bytearray(b'irteysqwe')
+
+
+Count does not work on bytes.
+
