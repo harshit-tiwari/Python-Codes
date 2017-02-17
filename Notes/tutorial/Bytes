@@ -15,3 +15,10 @@ An immutable sequence of numbers-between-0-and-255 is called a bytes object.
            >>> g[1]
            114
 # This is because the items of bytes are numbers. The ASCII code of the character is stored.
+
+# Since bytes are immutable, assignment is not possible.
+>>> g[0] = 115
+Traceback (most recent call last):
+  File "<pyshell#43>", line 1, in <module>
+    g[0] = 115
+TypeError: 'bytes' object does not support item assignment
