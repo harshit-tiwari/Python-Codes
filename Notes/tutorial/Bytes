@@ -1,19 +1,19 @@
 An immutable sequence of numbers-between-0-and-255 is called a bytes object.
 
-          >>> g = b'hrteys'
-          >>> len(g)
-          6
-          >>> g[0]
-          104
+                    >>> g = b'hrteys'
+                    >>> len(g)
+                    6
+                    >>> g[0]
+                    104
 
-           g += b'qwe'
-           >>> g
-           b'hrteysqwe'
+                    g += b'qwe'
+                    >>> g
+                    b'hrteysqwe'
 
-           >>> g[0]
-           104
-           >>> g[1]
-           114
+                    >>> g[0]
+                    104
+                    >>> g[1]
+                    114
 # This is because the items of bytes are numbers. The ASCII code of the character is stored.
 
 # Since bytes are immutable, assignment is not possible.
@@ -26,19 +26,47 @@ TypeError: 'bytes' object does not support item assignment
 
 The Byte is immutable whereas byteArrays are mutable.
 
->>> type(g)
-<class 'bytes'>
->>> h = bytearray(g)
->>> h
-bytearray(b'hrteysqwe')
->>> type(h)
-<class 'bytearray'>
->>> h[0]
-104
->>> h[0] = 105
->>> h
-bytearray(b'irteysqwe')
+                    >>> type(g)
+                    <class 'bytes'>
+                    >>> h = bytearray(g)
+                    >>> h
+                    bytearray(b'hrteysqwe')
+                    >>> type(h)
+                    <class 'bytearray'>
+                    >>> h[0]            
+                    104                 
+                    >>> h[0] = 105
+                    >>> h
+                    bytearray(b'irteysqwe')
 
 
 Count does not work on bytes.
+
+Decode() - function which takes in a character and returns a string.
+
+                    >>> a = b'abc'
+                    >>> b = a.decode('ascii')
+                    >>> b
+                    'abc'
+                    >>> type(b)
+                    <class 'str'>
+
+
+
+
+
+
+To make count work with bytes, we have to decode it.
+
+>>> a = b'abc'
+>>> b = a.decode('ascii')
+>>> b
+'abc'
+>>> type(b)
+<class 'str'>
+>>> b
+'abc'
+>>> c = 'abcdfgerf'
+>>> c.count(b)
+1
 
