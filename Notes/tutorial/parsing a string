@@ -1,0 +1,28 @@
+
+
+>>> a = 'jon,snow&tyrion,lannister&arya,stark'
+>>> b = a.split('&')
+>>> c = [i.split(',') for i in b if ',' in i]           # a list comprehension is used here
+>>> d = dict(c)
+
+>>> d
+{'tyrion': 'lannister', 'arya': 'stark', 'jon': 'snow'}
+
+>>> d['arya']
+'stark'
+
+>>> d['jon']
+'snow'
+
+
+>>> type(a)
+<class 'str'>
+
+>>> type(b)
+<class 'list'>
+ 
+>>> type(c)
+<class 'list'>
+
+>>> type(d)
+<class 'dict'>
