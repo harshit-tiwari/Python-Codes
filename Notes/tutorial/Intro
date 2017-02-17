@@ -39,6 +39,6 @@ are objects. Class instances are objects. Even modules are objects.
 individual instances of a class are also first-class objects.
 
 	The only delimiter in python is a colon (:) and the indentation of the code itself.
-	Indentation forms a code block. A complete blank line within a code block doesn't signify end of block. A complete blank lie is 
+	Indentation forms a code block. A complete blank line within a code block doesn't signify end of block. A complete blank line is 
   completely ignored and the execution is started with the next line.
 	Indentation is language requirement in Python. It is not a style of coding.
