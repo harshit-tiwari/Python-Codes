@@ -14,4 +14,4 @@ An immutable sequence of numbers-between-0-and-255 is called a bytes object.
            104
            >>> g[1]
            114
-# This is because the itelms of bytes are numbers. The ASCII code of the character is stored.
+# This is because the items of bytes are numbers. The ASCII code of the character is stored.
