@@ -6,6 +6,10 @@ Examples - Sub function in re module
     'white bright brd rd'
     
     >>> import re
-    >>> re.sub('road$', 'rd',s)
-    'white bright rd'
+    >>> re.sub('road$', 'rd',s)              # sub is used to replace and $ is used to indicate that we need to change only if it is the
+    'white bright rd'                        # last word in the string
     
+
+    >>> s = 'white rwhite bright broad'
+    >>> re.sub('^white', 'wh', s)           # ^ is used to indicate that we need to change only of it is the first word in the string
+    'wh rwhite bright broad'
