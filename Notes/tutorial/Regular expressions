@@ -1,1 +1,11 @@
 In Python, all the functionalities related to the regular expressions are contained in the " re " module.
+
+Examples - Sub function in re module
+
+    >>> s.replace('road','rd')
+    'white bright brd rd'
+    
+    >>> import re
+    >>> re.sub('road$', 'rd',s)
+    'white bright rd'
+    
