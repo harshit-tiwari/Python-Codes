@@ -1,3 +1,6 @@
+Python is an interpreted language, that means we do not need to compile the python programs or link it to some other program before 
+running them.
+
 	Every Python function returns a value; if the function ever executes a return statement, it will return that value, otherwise it will 
   return None, the Python null value.
 	In Python, variables are never explicitly typed. Python figures out what type a variable is and keeps track of it internally.
