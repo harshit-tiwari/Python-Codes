@@ -75,17 +75,20 @@ Everything between the triple quotes is the function’s docstring, which docume
 must be the first thing defined in a function (that is, on the next line after the function declaration). 
 You don’t technically need to give your function a docstring, but you always should. 
 
-	Built-in modules behave just like regular modules, but their Python source code is not available, because they are not written 
+Built-in modules behave just like regular modules, but their Python source code is not available, because they are not written 
 in Python! (Like Python itself, these built-in modules are written in C.)
 
-	A function, like everything else in Python, is an object.  Strings are objects. Lists are objects. Functions are objects. 
+A function, like everything else in Python, is an object.  Strings are objects. Lists are objects. Functions are objects. 
 Classes are objects. Class instances are objects. Even modules are objects.
-	Everything is an object in the sense that it can be assigned to a variable or passed as an argument to a function.
-	Modules are first-class objects. You can pass an entire module as an argument to a function. Classes are first-class objects, 
+
+Everything is an object in the sense that it can be assigned to a variable or passed as an argument to a function.
+
+Modules are first-class objects. You can pass an entire module as an argument to a function. Classes are first-class objects, 
 and individual instances of a class are also first-class objects.
 
 The only delimiter in python is a colon (:) and the indentation of the code itself.
 
 Indentation forms a code block. A complete blank line within a code block doesn't signify end of block. A complete blank line 
 is completely ignored and the execution is started with the next line.
-	Indentation is language requirement in Python. It is not a style of coding.
+
+Indentation is language requirement in Python. It is not a style of coding.
