@@ -27,6 +27,49 @@ once you have a single named argument, the rest of the arguments must also be na
 	Same for 
 	approximate_size(size=4000, False)
 
+_______________________________________________________________________________________________________________________________________
+Examples :-
+
+def func(a = 10, b = 20):
+        print('a : ', a)
+        print('b : ', b)
+
+func(a = 100, b = 200)
+
+ALLOWED
+
+
+import sys
+
+def func(a = 10, b = 20):
+        print('a : ', a)
+        print('b : ', b)
+
+func(100,200)
+
+ALLOWED
+
+
+
+def func(a = 10, b = 20):
+        print('a : ', a)
+        print('b : ', b)
+
+func(a = 100,200)
+
+FAILED
+
+
+def func(a = 10, b = 20):
+        print('a : ', a)
+        print('b : ', b)
+
+func(100, b = 200)
+
+ALLOWED
+
+______________________________________________________________________________________________________________________________________
+
 
 Everything between the triple quotes is the function’s docstring, which documents what the function does. A docstring, if it exists, 
 must be the first thing defined in a function (that is, on the next line after the function declaration). 
