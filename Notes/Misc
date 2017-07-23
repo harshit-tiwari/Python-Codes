@@ -2,3 +2,30 @@ In Python 3, there is no datatype as long because every integer value is treated
 
 Ex ; 
         total = 0       means total is of long type, it can handle large numbers too without need of any other declaration 
+        
+        
+        
+       
+x = [1,2,3]   this command creates a reference to the list which is stored in the memory of the system.
+y = x     this command creates yet another reference to the already existing list. It does not create a new list. Any changes done to x
+          will be visible in y too because the changes will bee done in the same list.
+          
+>>> x = [1,2,3]
+>>> x
+[1, 2, 3]
+>>> y = x
+>>> y
+[1, 2, 3]
+>>> x[2] = 10
+>>> x
+[1, 2, 10]
+>>> y
+[1, 2, 10]
+
+
+To create a new list, use list() function
+
+z = list(x)   or 
+
+p = x[:]
+
